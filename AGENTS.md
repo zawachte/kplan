@@ -48,12 +48,8 @@ No apply was performed during that verification.
 gofmt -w .
 go test ./...
 go vet ./...
-go build -buildvcs=false -o kplan .
+go build -o kubectl-kplan .
 ```
-
-The `-buildvcs=false` workaround is currently needed because the project is not
-yet its own Git repository and the parent home-directory Git metadata does not
-produce usable VCS status.
 
 Cluster-backed plan tests require network access to the Kubernetes API. Treat
 `plan` as read-only. Never run `apply` against the real cluster unless the user

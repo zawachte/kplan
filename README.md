@@ -4,11 +4,18 @@
 Kubernetes discovery, dynamic clients, and server-side apply dry-run. It never
 executes `kubectl`.
 
-## Build and run
+## Install as a kubectl plugin
 
 ```bash
-go build ./...
-go run . plan \
+go build -o ~/.local/bin/kubectl-kplan .
+kubectl plugin list
+```
+
+The executable must be named `kubectl-kplan` and installed in a directory on
+`PATH`. It can then be invoked as `kubectl kplan`:
+
+```bash
+kubectl kplan plan \
   --kubeconfig ../playground/fedora-cloud-44.kubeconfig \
   -f ../playground/sample-httpd.yaml
 ```
@@ -16,7 +23,7 @@ go run . plan \
 Apply after reviewing the plan:
 
 ```bash
-go run . apply \
+kubectl kplan apply \
   --kubeconfig ../playground/fedora-cloud-44.kubeconfig \
   -f ../playground/sample-httpd.yaml
 ```
