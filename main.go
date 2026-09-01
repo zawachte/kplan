@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/zach/kplan/internal/cli"
+	"github.com/zawachte/kplan/internal/cli"
 )
 
 func main() {

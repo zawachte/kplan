@@ -9,9 +9,9 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"github.com/zach/kplan/internal/engine"
-	"github.com/zach/kplan/internal/kube"
-	"github.com/zach/kplan/internal/manifest"
+	"github.com/zawachte/kplan/internal/engine"
+	"github.com/zawachte/kplan/internal/kube"
+	"github.com/zawachte/kplan/internal/manifest"
 )
 
 type options struct {

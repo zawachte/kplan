@@ -1,4 +1,4 @@
-module github.com/zach/kplan
+module github.com/zawachte/kplan
 
 go 1.27.0
 
